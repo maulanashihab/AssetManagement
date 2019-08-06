@@ -13,9 +13,6 @@ namespace DataAccess.Models
     public class Department : BaseModel
     {
         public string Name { get; set; }
-
-        [ForeignKey("TB_M_Division")]
-        public int Division_Id { get; set; }
         public Division Division { get; set; }
         public Department() { }
         public Department (DepartmentVM departmentVM)

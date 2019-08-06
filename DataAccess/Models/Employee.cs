@@ -22,20 +22,12 @@ namespace DataAccess.Models
         public string Email { get; set; }
         public int Salary { get; set; }
 
-        [ForeignKey("TB_M_Religion")]
-        public int Religion_Id { get; set; }
         public Religion Religion { get; set; }
 
-        [ForeignKey("TB_M_Department")]
-        public int Department_Id { get; set; }
         public Department Department { get; set; }
 
-        [ForeignKey("TB_M_Village")]
-        public int Village_Id { get; set; }
         public Village Village { get; set; }
 
-        [ForeignKey("TB_M_Role")]
-        public int Role_Id { get; set; }
         public Role Role { get; set; }
 
         public Employee Manager { get; set; }
