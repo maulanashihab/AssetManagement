@@ -13,9 +13,6 @@ namespace DataAccess.Models
     public class District : BaseModel
     {
         public string Name { get; set; }
-
-        [ForeignKey("TB_M_Regency")]
-        public int Regency_Id { get; set; }
         public Regency Regency { get; set; }
         public District() { }
         public District(DistrictVM districtVM)

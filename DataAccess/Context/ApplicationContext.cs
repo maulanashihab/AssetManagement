@@ -22,9 +22,10 @@ namespace DataAccess.Context
         public DbSet<Regency> Regencies { get; set; }
         public DbSet<Religion> Religions { get; set; }
         public DbSet<Role> Roles { get; set; }
-        public DbSet<Status> Statuses { get; set; }
+        public DbSet<Models.Action> Actions { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Village> Villages { get; set; }
+        public object Division { get; set; }
     }
 }
