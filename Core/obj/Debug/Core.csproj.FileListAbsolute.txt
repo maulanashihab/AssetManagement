@@ -1,0 +1,10 @@
+E:\Project\API\Core\bin\Debug\Core.exe.config
+E:\Project\API\Core\bin\Debug\Core.exe
+E:\Project\API\Core\bin\Debug\Core.pdb
+E:\Project\API\Core\bin\Debug\EntityFramework.dll
+E:\Project\API\Core\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project\API\Core\bin\Debug\EntityFramework.xml
+E:\Project\API\Core\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project\API\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+E:\Project\API\Core\obj\Debug\Core.exe
+E:\Project\API\Core\obj\Debug\Core.pdb

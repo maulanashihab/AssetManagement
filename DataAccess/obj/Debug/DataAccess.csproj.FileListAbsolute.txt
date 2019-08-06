@@ -1,0 +1,12 @@
+E:\Project\API\DataAccess\bin\Debug\DataAccess.exe.config
+E:\Project\API\DataAccess\bin\Debug\DataAccess.exe
+E:\Project\API\DataAccess\bin\Debug\DataAccess.pdb
+E:\Project\API\DataAccess\bin\Debug\Core.exe
+E:\Project\API\DataAccess\bin\Debug\EntityFramework.dll
+E:\Project\API\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project\API\DataAccess\bin\Debug\Core.pdb
+E:\Project\API\DataAccess\bin\Debug\EntityFramework.xml
+E:\Project\API\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project\API\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+E:\Project\API\DataAccess\obj\Debug\DataAccess.exe
+E:\Project\API\DataAccess\obj\Debug\DataAccess.pdb
