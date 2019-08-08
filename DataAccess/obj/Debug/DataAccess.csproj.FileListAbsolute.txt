@@ -10,3 +10,5 @@ E:\Project\API\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 E:\Project\API\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 E:\Project\API\DataAccess\obj\Debug\DataAccess.exe
 E:\Project\API\DataAccess\obj\Debug\DataAccess.pdb
+E:\Project\API\DataAccess\obj\Debug\DataAccess.Migrations.moduleadd.resources
+E:\Project\API\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
