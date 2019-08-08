@@ -33,16 +33,10 @@ namespace Common.Repositories
 
         public List<Asset> Get()
         {
-            var get = applicationContext.Assets.Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Assets.Include("Supplier").Include("Category").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
-        public List<Asset> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Assets.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
 
         public Asset Get(int id)
         {
@@ -53,6 +47,10 @@ namespace Common.Repositories
         public bool Insert(AssetVM assetVM)
         {
             var push = new Asset(assetVM);
+            var getSupplier = applicationContext.Suppliers.SingleOrDefault(x => x.IsDelete == false && x.Id == assetVM.SupplierId);
+            var getCategory = applicationContext.Categories.SingleOrDefault(x => x.IsDelete == false && x.Id == assetVM.CategoryId);
+            push.Supplier = getSupplier;
+            push.Category = getCategory;
             applicationContext.Assets.Add(push);
             var result = applicationContext.SaveChanges();
             return result > 0;

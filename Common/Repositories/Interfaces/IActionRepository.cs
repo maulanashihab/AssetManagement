@@ -11,7 +11,7 @@ namespace Common.Repositories.Interfaces
     {
         List<DataAccess.Models.Action> Get();
         DataAccess.Models.Action Get(int id);
-        List<DataAccess.Models.Action> Get(string value);
+        //List<DataAccess.Models.Action> Get(string value);
         bool Insert(ActionVM actionVM);
         bool Update(int id, ActionVM actionVM);
         bool Delete(int id);

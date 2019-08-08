@@ -37,12 +37,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<AssetEmployee> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.AssetEmployees.Where(x => (Convert.ToString(x.LoanDate).Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
 
         public AssetEmployee Get(int id)
         {
@@ -53,6 +47,12 @@ namespace Common.Repositories
         public bool Insert(AssetEmployeeVM assetemployeeVM)
         {
             var push = new AssetEmployee(assetemployeeVM);
+            var getStatus = applicationContext.Actions.SingleOrDefault(x => x.IsDelete == false && x.Id == assetemployeeVM.ActionId);
+            var getEmployee = applicationContext.Employees.SingleOrDefault(x => x.IsDelete == false && x.Id == assetemployeeVM.EmployeeId);
+            var getAsset = applicationContext.Assets.SingleOrDefault(x => x.IsDelete == false && x.Id == assetemployeeVM.AssetId);
+            push.Action = getStatus; 
+            push.Employee = getEmployee; 
+            push.Asset = getAsset;
             applicationContext.AssetEmployees.Add(push);
             var result = applicationContext.SaveChanges();
             return result > 0;

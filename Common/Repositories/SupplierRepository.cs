@@ -37,12 +37,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Supplier> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Suppliers.Where(x => (Convert.ToString(x.Name).Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
 
         public Supplier Get(int id)
         {

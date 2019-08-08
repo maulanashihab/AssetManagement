@@ -12,9 +12,8 @@ namespace Common.Repositories.Interfaces
     {
         List<User> Get();
         User Get(int id);
-        List<User> Get(string value);
         bool Insert(UserVM userVM);
-        bool Update(int id, UserVM userVM);
-        bool Delete(int id);
+        //bool Update(int id, UserVM userVM);
+        //bool Delete(int id);
     }
 }

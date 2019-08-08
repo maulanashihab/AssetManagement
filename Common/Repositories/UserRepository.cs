@@ -16,21 +16,21 @@ namespace Common.Repositories
         private bool status = false;
         private ApplicationContext applicationContext = new ApplicationContext();
 
-        public bool Delete(int id)
-        {
-            var get = Get(id);
-            if (get != null)
-            {
-                get.Delete();
-                applicationContext.Entry(get).State = EntityState.Modified;
-                var result = applicationContext.SaveChanges();
-                return result > 0;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //public bool Delete(int id)
+        //{
+        //    var get = Get(id);
+        //    if (get != null)
+        //    {
+        //        get.Delete();
+        //        applicationContext.Entry(get).State = EntityState.Modified;
+        //        var result = applicationContext.SaveChanges();
+        //        return result > 0;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
 
         public List<User> Get()
         {
@@ -38,12 +38,6 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<User> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Users.Where(x => Convert.ToString(x.Id).Contains(value) && x.IsDelete == false).ToList();
-            return get;
-        }
 
         public User Get(int id)
         {
@@ -59,13 +53,13 @@ namespace Common.Repositories
             return result > 0;
         }
 
-        public bool Update(int id, UserVM userVM)
-        {
-            var get = Get(id);
-            get.Update(userVM);
-            applicationContext.Entry(get).State = EntityState.Modified;
-            var result = applicationContext.SaveChanges();
-            return result > 0;
-        }
+        //public bool Update(int id, UserVM userVM)
+        //{
+        //    var get = Get(id);
+        //    get.Update(userVM);
+        //    applicationContext.Entry(get).State = EntityState.Modified;
+        //    var result = applicationContext.SaveChanges();
+        //    return result > 0;
+        //}
     }
 }

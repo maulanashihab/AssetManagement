@@ -12,7 +12,7 @@ namespace Common.Repositories.Interfaces
     {
         List<Asset> Get();
         Asset Get(int id);
-        List<Asset> Get(string value);
+       // List<Asset> Get(string value);
         bool Insert(AssetVM assetVM);
         bool Update(int id, AssetVM assetVM);
         bool Delete(int id);

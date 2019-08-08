@@ -12,7 +12,6 @@ namespace Common.Repositories.Interfaces
     {
         List<Supplier> Get();
         Supplier Get(int id);
-        List<Supplier> Get(string value);
         bool Insert(SupplierVM SupplierVM);
         bool Update(int id, SupplierVM SupplierVM);
         bool Delete(int id);
