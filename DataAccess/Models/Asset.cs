@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace DataAccess.Models
 {
     [Table("TB_M_Asset")]
+    //test
     public class Asset : BaseModel
     {
         public string Name { get; set; }

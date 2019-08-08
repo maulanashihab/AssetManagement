@@ -20,10 +20,11 @@ namespace DataAccess.ViewModels
         public int Salary { get; set; }
         public int ReligionId { get; set; }
         public int DepartmentId { get; set; }
+        public int RoleId { get; set; }
         public int VillageId { get; set; }
         public int ManagerId { get; set; }
         public EmployeeVM() { }
-        public EmployeeVM(string firstName, string lastName, string address, bool gender, bool maritalStatus, int numberofchildren, string phonenumber, string email, int salary, int religionid, int departmentid, int villageid, int managerId)
+        public EmployeeVM(string firstName, string lastName, string address, bool gender, bool maritalStatus, int numberofchildren, string phonenumber, string email, int salary, int religionid, int departmentid, int roleid, int villageid, int managerId)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -36,6 +37,7 @@ namespace DataAccess.ViewModels
             this.Salary = salary;
             this.ReligionId = religionid;
             this.DepartmentId = departmentid;
+            this.RoleId = roleid;
             this.VillageId = villageid;
             this.ManagerId = managerId;
         }

@@ -13,8 +13,6 @@ namespace DataAccess.Models
     public class Village : BaseModel
     {
         public string Name { get; set; }
-        [ForeignKey("TB_M_District")]
-        public int District_Id { get; set; }
         public District District { get; set; }
         public Village() { }
         public Village(VillageVM villageVM)
