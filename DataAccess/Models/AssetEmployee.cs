@@ -16,7 +16,7 @@ namespace DataAccess.Models
         public DateTime? LoanDate { get; set; }
         public DateTime? ReturnDate { get; set; }
         public int Quantity { get; set; }
-        public Status Status { get; set; }
+        public Action Action { get; set; }
         public Employee Employee { get; set; }
         public Asset Asset { get; set; }
         //parsing

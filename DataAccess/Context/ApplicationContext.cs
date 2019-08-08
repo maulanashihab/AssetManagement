@@ -26,6 +26,6 @@ namespace DataAccess.Context
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Village> Villages { get; set; }
-        public object Division { get; set; }
+        //public object Division { get; set; }
     }
 }
