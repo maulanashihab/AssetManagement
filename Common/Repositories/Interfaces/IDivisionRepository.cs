@@ -12,7 +12,7 @@ namespace Common.Repositories.Interfaces
     {
         List<Division> Get();
         Division Get(int id);
-        List<Division> Get(string value);
+        //List<Division> Get(string value);
         bool Insert(DivisionVM divisionVM);
         //bool Update(int id, DivisionVM divisionVM);
         //bool Delete(int id);

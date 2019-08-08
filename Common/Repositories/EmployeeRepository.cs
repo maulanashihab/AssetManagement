@@ -29,22 +29,22 @@ namespace Common.Repositories
 
         public List<Employee> Get()
         {
-            var get = applicationContext.Employees.Include("TB_M_Religion").Include("TB_M_Role").Include("TB_M_Village").Include("TB_M_Department").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Employees.Include("Religion").Include("Role").Include("Village").Include("Department").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
-        public Employee GetLast()
-        {
-            var get = applicationContext.Employees.OrderByDescending(t => t.Id).FirstOrDefault();
-            return get;
-        }
+        //public Employee GetLast()
+        //{
+        //    var get = applicationContext.Employees.OrderByDescending(t => t.Id).FirstOrDefault();
+        //    return get;
+        //}
 
-        public List<Employee> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Employees.Include("TB_M_Religion").Include("TB_M_Role").Include("TB_M_Village").Include("TB_M_Department").Where(x => (x.FirstName.Contains(value) || x.FirstName.Contains(value) || x.Id.ToString().Contains(value) || x.Religion.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Employee> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Employees.Include("TB_M_Religion").Include("TB_M_Role").Include("TB_M_Village").Include("TB_M_Department").Where(x => (x.FirstName.Contains(value) || x.FirstName.Contains(value) || x.Id.ToString().Contains(value) || x.Religion.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Employee Get(int id)
         {

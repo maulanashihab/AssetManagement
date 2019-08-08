@@ -28,16 +28,16 @@ namespace Common.Repositories
 
         public List<District> Get()
         {
-            var get = applicationContext.Districts.Include("TB_M_Regency").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Districts.Include("Regency").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
-        public List<District> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Districts.Include("TB_M_Regency").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Regency.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<District> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Districts.Include("TB_M_Regency").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Regency.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public District Get(int id)
         {

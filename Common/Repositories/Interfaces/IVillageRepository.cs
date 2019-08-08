@@ -12,7 +12,7 @@ namespace Common.Repositories.Interfaces
     {
         List<Village> Get();
         Village Get(int id);
-        List<Village> Get(string value);
+        //List<Village> Get(string value);
         bool Insert(VillageVM villageVM);
         //bool Update(int id, VillageVM villageVM);
         //bool Delete(int id);

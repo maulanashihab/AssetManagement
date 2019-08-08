@@ -12,7 +12,7 @@ namespace Common.Repositories.Interfaces
     {
         List<Regency> Get();
         Regency Get(int id);
-        List<Regency> Get(string value);
+        //List<Regency> Get(string value);
         bool Insert(RegencyVM regencyVM);
         //bool Update(int id, RegencyVM regencyVM);
         //bool Delete(int id);

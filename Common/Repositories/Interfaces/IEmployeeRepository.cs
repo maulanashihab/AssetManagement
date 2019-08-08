@@ -12,8 +12,8 @@ namespace Common.Repositories.Interfaces
     {
         List<Employee> Get();
         Employee Get(int id);
-        Employee GetLast();
-        List<Employee> Get(string value);
+        //Employee GetLast();
+        //List<Employee> Get(string value);
         bool Insert(EmployeeVM employeeVM);
         //bool Update(int id, EmployeeVM employeeVM);
         //bool Delete(int id);

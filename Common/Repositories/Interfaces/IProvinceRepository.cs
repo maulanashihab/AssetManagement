@@ -12,7 +12,7 @@ namespace Common.Repositories.Interfaces
     {
         List<Province> Get();
         Province Get(int id);
-        List<Province> Get(string value);
+        //List<Province> Get(string value);
         bool Insert(ProvinceVM provinceVM);
         //bool Update(int id, ProvinceVM provinceVM);
         //bool Delete(int id);
