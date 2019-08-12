@@ -50,8 +50,8 @@ namespace Common.Repositories
             var getStatus = applicationContext.Actions.SingleOrDefault(x => x.IsDelete == false && x.Id == assetemployeeVM.ActionId);
             var getEmployee = applicationContext.Employees.SingleOrDefault(x => x.IsDelete == false && x.Id == assetemployeeVM.EmployeeId);
             var getAsset = applicationContext.Assets.SingleOrDefault(x => x.IsDelete == false && x.Id == assetemployeeVM.AssetId);
-            push.Action = getStatus; 
-            push.Employee = getEmployee; 
+            push.Action = getStatus;
+            push.Employee = getEmployee;
             push.Asset = getAsset;
             applicationContext.AssetEmployees.Add(push);
             var result = applicationContext.SaveChanges();

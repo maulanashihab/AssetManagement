@@ -33,7 +33,7 @@ namespace Common.Repositories
 
         public List<Asset> Get()
         {
-            var get = applicationContext.Assets.Include("Supplier").Include("Category").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Assets.Include("Category").Include("Supplier").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
