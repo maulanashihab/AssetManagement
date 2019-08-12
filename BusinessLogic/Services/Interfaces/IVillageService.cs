@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repositories.Interfaces
+namespace BusinessLogic.Services.Interfaces
 {
-    public interface IVillageRepository
+    public interface IVillageService
     {
         List<Village> Get();
         Village Get(int id);

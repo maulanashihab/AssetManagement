@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repositories.Interfaces
+namespace BusinessLogic.Services.Interfaces
 {
-    public interface IRegencyRepository
+    public interface IRegencyService
     {
         List<Regency> Get();
         Regency Get(int id);

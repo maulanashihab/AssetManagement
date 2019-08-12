@@ -28,16 +28,16 @@ namespace Common.Repositories
 
         public List<Department> Get()
         {
-            var get = applicationContext.Departments.Include("TB_M_Division").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Departments.Include("Division").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
-        public List<Department> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Departments.Include("TB_M_Division").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Division.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Department> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Departments.Include("TB_M_Division").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Division.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Department Get(int id)
         {

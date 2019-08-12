@@ -18,7 +18,7 @@ namespace DataAccess.Context
         public DbSet<District> Districts { get; set; }
         public DbSet<Division> Divisions { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<Province> Provincies { get; set; }
+        public DbSet<Province> Provinces { get; set; }
         public DbSet<Regency> Regencies { get; set; }
         public DbSet<Religion> Religions { get; set; }
         public DbSet<Role> Roles { get; set; }

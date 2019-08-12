@@ -15,5 +15,9 @@ namespace DataAccess.ViewModels
         {
             this.Name = name;
         }
+        public void Update(string name)
+        {
+            this.Name = name;
+        }
     }
 }

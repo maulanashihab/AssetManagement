@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Repositories.Interfaces
+namespace BusinessLogic.Services.Interfaces
 {
-    public interface IRoleRepository
+    public interface IRoleService
     {
         List<Role> Get();
         Role Get(int id);

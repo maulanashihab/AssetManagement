@@ -11,25 +11,25 @@ namespace DataAccess.ViewModels
         public DateTime? LoanDate { get; set; }
         public DateTime? ReturnDate { get; set; }
         public int Quantity { get; set; }
-        public int StatusId { get; set; }
+        public int ActionId { get; set; }
         public int EmployeeId { get; set; }
         public int AssetId { get; set; }
         public AssetEmployeeVM() { }
-        public AssetEmployeeVM(DateTime? loandate, DateTime? returndate, int quantity, int statusid, int employeeid, int assetid)
+        public AssetEmployeeVM(DateTime? loandate, DateTime? returndate, int quantity, int actionid, int employeeid, int assetid)
         {
             this.LoanDate = loandate;
             this.ReturnDate = returndate;
             this.Quantity = quantity;
-            this.StatusId = statusid;
+            this.ActionId = actionid;
             this.EmployeeId = employeeid;
             this.AssetId = assetid;
         }
-        public void Update(DateTime? loandate, DateTime? returndate, int quantity, int statusid, int employeeid, int assetid)
+        public void Update(DateTime? loandate, DateTime? returndate, int quantity, int actionid, int employeeid, int assetid)
         {
             this.LoanDate = loandate;
             this.ReturnDate = returndate;
             this.Quantity = quantity;
-            this.StatusId = statusid;
+            this.ActionId = actionid;
             this.EmployeeId = employeeid;
             this.AssetId = assetid;
         }
