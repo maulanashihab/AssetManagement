@@ -32,8 +32,7 @@ namespace Common.Repositories
                         Include("District").
                         Include("District.Regency").
                         Include("District.Regency.Province").
-                        Where(x => x.IsDelete == false).ToList();
-            return get;
+                        Where(x => x.IsDelete == false).ToList();            return get;
         }
 
         //public List<Village> Get(string value)

@@ -1,18 +1,4 @@
-﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-using BusinessLogic.Services.Interfaces;
+﻿using BusinessLogic.Services.Interfaces;
 using DataAccess.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -24,18 +10,18 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
-    public class RegenciesController : ApiController
+    public class ProvinciesController : ApiController
     {
-        readonly IRegencyService _iRegencyService;
-        public RegenciesController() { }
-        public RegenciesController(IRegencyService iRegencyService)
+        readonly IProvinceService _iProvinceService;
+        public ProvinciesController() { }
+        public ProvinciesController(IProvinceService iProvinceService)
         {
-            _iRegencyService = iRegencyService;
+            _iProvinceService = iProvinceService;
         }
-        public HttpResponseMessage GetRegency()
+        public HttpResponseMessage GetProvince()
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Data not Found");
-            var get = _iRegencyService.Get();
+            var get = _iProvinceService.Get();
             if(get != null)
             {
                 message = Request.CreateResponse(HttpStatusCode.OK, get);
@@ -43,21 +29,21 @@ namespace API.Controllers
             }
             return message;
         }
-        public HttpResponseMessage GetRegency(int id)
+        public HttpResponseMessage GetProvince(int id)
         {
-            var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Data Not Found");
-            var get = _iRegencyService.Get(id);
-            if(get != null)
+            var message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "Invalid Id");
+            var get = _iProvinceService.Get(id);
+            if (get != null)
             {
                 message = Request.CreateResponse(HttpStatusCode.OK, get);
                 return message;
             }
-            return message;
+            return message; 
         }
-        public HttpResponseMessage InsertRegency(RegencyVM regencyVM)
+        public HttpResponseMessage InsertProvince(ProvinceVM provinceVM)
         {
             var message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Wrong");
-            var result = _iRegencyService.Insert(regencyVM);
+            var result = _iProvinceService.Insert(provinceVM);
             if (result)
             {
                 message = Request.CreateResponse(HttpStatusCode.OK, "Success Add");
@@ -65,4 +51,5 @@ namespace API.Controllers
             return message;
         }
     }
+
 }
