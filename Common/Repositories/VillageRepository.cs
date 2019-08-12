@@ -28,16 +28,19 @@ namespace Common.Repositories
 
         public List<Village> Get()
         {
-            var get = applicationContext.Villages.Include("TB_M_District").Where(x => x.IsDelete == false).ToList();
-            return get;
+            var get = applicationContext.Villages.
+                        Include("District").
+                        Include("District.Regency").
+                        Include("District.Regency.Province").
+                        Where(x => x.IsDelete == false).ToList();            return get;
         }
 
-        public List<Village> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Villages.Include("TB_M_District").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.District.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Village> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Villages.Include("TB_M_District").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.District.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Village Get(int id)
         {
