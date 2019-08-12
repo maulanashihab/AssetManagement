@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Common.Repositories.Interfaces
+namespace BusinessLogic.Services.Interfaces
 {
-    public interface IDistrictRepository
+    public interface IDistrictService
     {
         List<District> Get();
         District Get(int id);

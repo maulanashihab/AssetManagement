@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Common.Repositories.Interfaces
+namespace BusinessLogic.Services.Interfaces
 {
-    public interface IDepartmentRepository
+    public interface IDepartmentService
     {
         List<Department> Get();
         Department Get(int id);

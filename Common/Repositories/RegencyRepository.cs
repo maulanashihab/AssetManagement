@@ -28,16 +28,16 @@ namespace Common.Repositories
 
         public List<Regency> Get()
         {
-            var get = applicationContext.Regencies.Include("TB_M_Province").Where(x => x.IsDelete == false).ToList();
+            var get = applicationContext.Regencies.Include("Province").Where(x => x.IsDelete == false).ToList();
             return get;
         }
 
-        public List<Regency> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Regencies.Include("TB_M_Province").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Province.Name.Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Regency> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Regencies.Include("TB_M_Province").Where(x => (x.Name.Contains(value) || x.Id.ToString().Contains(value) || x.Province.Name.Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Regency Get(int id)
         {
@@ -49,7 +49,7 @@ namespace Common.Repositories
         {
             var push = new Regency(regencyVM);
             //ini nih foreign key
-            var getProvince = applicationContext.Provincies.SingleOrDefault(x => x.IsDelete == false && x.Id == regencyVM.ProvinceId);
+            var getProvince = applicationContext.Provinces.SingleOrDefault(x => x.IsDelete == false && x.Id == regencyVM.ProvinceId);
             push.Province = getProvince;
             applicationContext.Regencies.Add(push);
             var result = applicationContext.SaveChanges();

@@ -32,12 +32,12 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Division> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Divisions.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Division> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Divisions.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Division Get(int id)
         {

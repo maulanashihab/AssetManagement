@@ -32,12 +32,12 @@ namespace Common.Repositories
             return get;
         }
 
-        public List<Religion> Get(string value)
-        {
-            //roles di application context class
-            var get = applicationContext.Religions.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
-            return get;
-        }
+        //public List<Religion> Get(string value)
+        //{
+        //    //roles di application context class
+        //    var get = applicationContext.Religions.Where(x => (x.Name.Contains(value) || Convert.ToString(x.Id).Contains(value)) && x.IsDelete == false).ToList();
+        //    return get;
+        //}
 
         public Religion Get(int id)
         {
